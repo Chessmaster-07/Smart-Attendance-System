@@ -46,3 +46,33 @@ Students register and submit their face data.
 Python AI service trains the model and notifies the backend.
 During class, video frames are processed to detect student presence.
 Attendance payloads are validated by the backend and stored in the database.
+ Folder Structure
+SmartAttendenceSystem/
+├── go.mod
+├── go.sum
+└── server
+    ├── cmd                # App initialization (DB, router)
+    ├── internals
+    │   ├── domain         # Domain models
+    │   ├── handler        # API route handlers
+    │   ├── middlewares    # Auth & access control
+    │   ├── repository     # PostgreSQL repository
+    │   └── service        # Business logic services
+    ├── pkg
+    │   └── utils          # JWT, password hashing, tokens
+    └── main.go            # Entry point
+⚡ Quick Start
+1️⃣ Clone the repository
+git clone https://github.com/your-username/SmartAttendenceSystem.git
+cd SmartAttendenceSystem/server
+2️⃣ Setup .env file
+Create a .env file with your PostgreSQL URL:
+
+DATABASE_URL=postgres://user:password@localhost:5432/smart_attendance
+3️⃣ Run the server
+go mod tidy
+go run main.go
+🌐 Related Repositories & Links
+🤖 AI Model Repository
+🎓 Student Panel (Frontend)
+🧑‍🏫 Faculty Panel (Frontend)
