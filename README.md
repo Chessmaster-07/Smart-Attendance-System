@@ -1,4 +1,4 @@
-# 🎓 Smart Attendance System – Server
+# 🎓 Smart Attendance System 
 
 ## 📖 Overview
 
